@@ -15,8 +15,8 @@ class OportunidadesAbm(APIView):
         if total==0:
             total=1
 
-        porcentajeAceptado= (CantAceptados/total)*100
-        porcentajeRechazaddo= (rechazados/total)*100
+        porcentajeAceptado= round((CantAceptados/total)*100,2)
+        porcentajeRechazaddo= round((rechazados/total)*100,2)
         
         cantidadNumerosVendidos=0
         for aceptado in aceptados:
@@ -52,4 +52,11 @@ class OportunidadesAbm(APIView):
         else:
             oportunidad= Oportunidades.objects.create(aceptados=aceptado)
         
-        return Response({'Mensaje':'Oportunidad creada con exito'}, status=200)
+        return Response({'Mensaje':'Oportunidad creada con exito', 'aceptado':oportunidad.aceptados}, status=200)
+    
+    def delete(self,request):
+        oportunidades= Oportunidades.objects.all()
+        for op in oportunidades:
+            op.delete()        
+        
+        return Response({"mensaje":"eliminado con exito"}, status=200)
