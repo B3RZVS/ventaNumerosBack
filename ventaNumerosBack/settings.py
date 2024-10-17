@@ -26,13 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(du4kmronp)7mkcyi)*m)go4f-4o_^w$j+9$28^c1bkjqr$*30'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://ventanumerosback.onrender.com']
+ALLOWED_HOSTS = ['ventanumerosback.onrender.com','127.0.0.1']
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://192.168.68.52:5173",
     "https://ventanumerosback.onrender.com",
+    'http://127.0.0.1:8000'
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
