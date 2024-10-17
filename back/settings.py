@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ventaNumerosBack.wsgi.application'
+WSGI_APPLICATION = 'back.wsgi.application'
 
 
 # Database
