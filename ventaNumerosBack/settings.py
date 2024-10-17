@@ -28,12 +28,13 @@ SECRET_KEY = 'django-insecure-(du4kmronp)7mkcyi)*m)go4f-4o_^w$j+9$28^c1bkjqr$*30
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ventanumerosback.onrender.com','127.0.0.1']
+ALLOWED_HOSTS = ['ventanumerosback.onrender.com','127.0.0.1',"ventanumerosfront.onrender.com"]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://192.168.68.52:5173",
     "https://ventanumerosback.onrender.com",
-    'http://127.0.0.1:8000'
+    'http://127.0.0.1:8000',
+    "https://ventanumerosfront.onrender.com"
 ]
 CORS_ALLOW_ALL_ORIGINS = False
 
