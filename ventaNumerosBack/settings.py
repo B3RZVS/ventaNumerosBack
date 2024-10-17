@@ -28,10 +28,11 @@ SECRET_KEY = 'django-insecure-(du4kmronp)7mkcyi)*m)go4f-4o_^w$j+9$28^c1bkjqr$*30
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://ventanumerosback.onrender.com']
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://192.168.68.52:5173",
+    "https://ventanumerosback.onrender.com",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -86,10 +87,10 @@ WSGI_APPLICATION = 'ventaNumerosBack.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+DATABASE_URL = 'postgresql://ventasnumeros_user:tegtcptGzUXjOP4hbp2iN1918QbpndfW@dpg-cs8em688fa8c73bsqv40-a.oregon-postgres.render.com/ventasnumeros'
+
 DATABASES = {
-     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL')
-    )
+    'default': dj_database_url.config(default=DATABASE_URL)
 }
 
 
